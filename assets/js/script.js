@@ -1,18 +1,23 @@
+/*---- 
+	DOM READY CODE
+	=>	To Start DOM Manipulating, first we have to subscribe DOM
+-----*/
+
 /*---- Jquery Version -----*/
-// $(document).ready(function(){
-// 	alert("DOM READY")
-// })
+$(document).ready(function(){
+	alert("DOM READY")
+})
 
 
 /*---- Shorter Jquery Version ----*/
-// $(function(){
-// 	alert("NEW DOM READY")
-// })
+$(function(){
+	alert("NEW DOM READY")
+})
 
 /*---- Without Jquery ----*/
-// document.addEventListener('DOMContentLoaded', function(){
-// 	alert("WITHOUT JQUERY")
-// }, false);
+document.addEventListener('DOMContentLoaded', function(){
+	alert("WITHOUT JQUERY")
+}, false);
 
 /*---- Works AnyWhere----*/
 r(function(){

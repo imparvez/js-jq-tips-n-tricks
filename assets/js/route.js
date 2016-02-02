@@ -26,6 +26,20 @@ $(document).ready(function(){
 		$(".home").on('click', function(){
 			alert($(this).text())
 		})
+
+		/*TO check whether the element with the id is which element is it <div> or <p> using is() function*/
+		$("#elem").is('div') && console.log("IT IS DIV ELEMENT")
+
+		$("#elem").is('p') && console.log("IT IS P ELEMENT")
+
+		/*To check whether the element is visible in DOM or not*/
+		$("#elem").is(':visible') && console.log("IT IS VISIBLE")
+
+		$("#elem").is(':not(:visible)') && console.log("IT IS NOT VISIBLE")
+
+		/*To check how many elements on your page*/
+		console.log('This page has ' + $('*').length + ' elements!');
+
 	})
 
 	route.add('work.html', function(){

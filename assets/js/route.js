@@ -58,6 +58,31 @@ $(document).ready(function(){
 		$(".work").on('click', function(){
 			alert($(this).text())
 		})
+
+
+		/*Jquery takes two argument. Select an element and the #secondList is the context that limit the search.*/
+		$('li','#secondList').each(function(){
+			$(this).css('fontSize',12)
+		})
+
+
+		/*Create an element and second parameter is an jquery method*/
+		var div = $('<div>', {
+			"class": "bigBlue",
+			"text": "HELLOO",
+			"css": {
+				"backgroundColor": "#f00",
+				"color": "#fff"
+			},
+			"width": 20,
+			"height" : "20px",
+			"animate": {
+				"width": 200,
+				"height": 50
+			}
+		})
+
+		div.appendTo('body');
 	})
 
 	route.add('contact-us.html', function(){

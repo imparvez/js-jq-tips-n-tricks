@@ -20,6 +20,18 @@ $(document).ready(function(){
 		$(".project").on('click', function(){
 			alert($(this).text())
 		})
+
+		//Old way to check the element existence
+		console.log($("#exist").length == 1 ? 'exists' : 'doesn\'t exist');
+
+		//Trick
+		$.fn.exists = function(){ return this.length > 0; } 
+		//jQuery.fn = $.fn (shorthand) => Jquery.prototype OR $.prototype 
+
+		console.log($('#existsdfsd').exists() ? "exists!" : "doesn't exist!");
+		//return this.length > 0 ==> 0 > 0 ==> FALSE ==> ELEMENT DOSEN'T EXISTS
+		console.log($('#exist').exists() ? "exists!" : "doesn't exist!");
+		//return this.length > 0 ==> 1 > 0 ==> TRUE ==> ELEMENT EXISTS
 	})
 
 	route.add('/', function(){

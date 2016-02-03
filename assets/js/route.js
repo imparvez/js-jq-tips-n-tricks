@@ -89,7 +89,65 @@ $(document).ready(function(){
 		$(".contact").on('click', function(){
 			alert($(this).text())
 		})
+
+		var breakFast = $("#meals .breakfast")
+
+		breakFast
+			.find(".eggs")
+			.text("YES")
+			.end() //Send backs to breakFast (    $("#meals .breakfast")   )
+			.find(".toast")
+			.text("MAYBE")
+			.css("color","red")
+			.end() //Send backs to breakFast (    $("#meals .breakfast")   )
+
 	})
 
 	route.run();
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

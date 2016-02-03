@@ -101,6 +101,18 @@ $(document).ready(function(){
 			.css("color","red")
 			.end() //Send backs to breakFast (    $("#meals .breakfast")   )
 
+		var url = "https://www.quora.com/What-is-the-code-quality-at-Google-like";
+
+		var a = $('<a>', { href: url });
+
+		console.log('Host name: ' + a.prop('hostname'));
+		console.log('Path: ' + a.prop('pathname'));
+		console.log('Query: ' + a.prop('search'));
+		console.log('Protocol: ' + a.prop('protocol'));
+		console.log('Hash: ' + a.prop('hash'));
+		console.log('Port: ' + a.prop('port'));
+		console.log(url.match(/^.*?-?(w*)./)[1]); //Check for www
+		console.log(url.match(/^(http|https):/)[1]); //Check for http/https
 	})
 
 	route.run();
